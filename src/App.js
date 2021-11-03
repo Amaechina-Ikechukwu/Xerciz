@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router , Route} from 'react-router-dom'
+import Navbar from './components/Navbar';
+import Xerciz_user from './components/xerciz_user'
+import Edit_xerciz from './components/edit_xerciz'
+import Create_xerciz from './components/create-xerciz'
+import Xerciz_list from './components/xerciz_list'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+    
+      <Route path='/' exact component={Xerciz_list} />
+      <Route path='/edit:id' exact component={Edit_xerciz} />
+      <Route path='/create' exact component={Create_xerciz} />
+      <Route path='/user' exact component={Xerciz_user} />
+  </Router>
   );
 }
 
