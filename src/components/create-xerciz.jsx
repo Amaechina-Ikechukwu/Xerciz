@@ -16,9 +16,13 @@ export class Create_xerciz extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      users: ["test user"],
-      username: "test user",
+    axios.get("http://localhost:5000/users").then((response) => {
+      if (response.data.length > 0) {
+        this.setState({
+          users: response.data.map((user) => user.username),
+          username: response.data[0].username,
+        });
+      }
     });
   }
 
@@ -55,6 +59,9 @@ export class Create_xerciz extends Component {
       duration: this.state.duration,
       date: this.state.date,
     };
+    axios
+      .post("http://localhost:5000/xerciz/add", exercise)
+      .then((res) => console.log(res.data));
     window.location = "/";
     console.log(exercise);
   };

@@ -98,47 +98,42 @@ export class Navbar extends Component {
           </Link>
           <div className="collpase navbar-collapse">
             <ul className="navbar-nav mr-auto">
-              <li className="navbar-item">
-                <div class=" rounded-md p-0.5 hover:bg-gray-600  ">
-                  <Link to="/" className="nav-link">
-                    <Tooltip title="Exercises">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">
-                          <CollectionIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
-                        </a>
-                      </li>
-                    </Tooltip>
-                  </Link>
-                </div>
-              </li>
+              <div class=" rounded-md p-0.5 hover:bg-gray-600  ">
+                <Link to="/" className="nav-link">
+                  <Tooltip title="Exercises">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/">
+                        <CollectionIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
+                      </a>
+                    </li>
+                  </Tooltip>
+                </Link>
+              </div>
 
-              <li className="navbar-item">
-                <div class=" rounded-md p-0.5 hover:bg-red-400  ">
-                  {" "}
-                  <Link to="/create" className="nav-link">
-                    <Tooltip title="Create Exercise">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/create">
-                          <PlusCircleIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
-                        </a>
-                      </li>
-                    </Tooltip>
-                  </Link>
-                </div>
-              </li>
-              <li className="navbar-item">
-                <div class=" rounded-md p-0.5 hover:bg-blue-400">
-                  <Link to="/user" className="nav-link">
-                    <Tooltip title="Exercise User">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/user">
-                          <UserCircleIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
-                        </a>
-                      </li>
-                    </Tooltip>
-                  </Link>
-                </div>
-              </li>
+              <div class=" rounded-md p-0.5 hover:bg-red-400  ">
+                {" "}
+                <Link to="/create" className="nav-link">
+                  <Tooltip title="Create Exercise">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/create">
+                        <PlusCircleIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
+                      </a>
+                    </li>
+                  </Tooltip>
+                </Link>
+              </div>
+
+              <div class=" rounded-md p-0.5 hover:bg-blue-400">
+                <Link to="/user" className="nav-link">
+                  <Tooltip title="Exercise User">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/user">
+                        <UserCircleIcon class="w-7 h-7 text-gray-500 hover:text-gray-100" />
+                      </a>
+                    </li>
+                  </Tooltip>
+                </Link>
+              </div>
             </ul>
           </div>
         </nav>
